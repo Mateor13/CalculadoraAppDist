@@ -8,7 +8,6 @@ public class test {
         p.setNombre("Juan");
         p.setFechaNacimiento("01/10/2004");
         p.setDireccion("La Prensa");
-
         System.out.println("Nombre: "+ p.getNombre());
         System.out.println("Fecha de Nacimiento: "+ p.getFechaNacimiento());
         System.out.println("Dirección: "+ p.getDireccion());
