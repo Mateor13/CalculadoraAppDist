@@ -17,6 +17,7 @@ public class Datos extends JFrame {
         setSize(300, 200);
         setLayout(null);
         setLocationRelativeTo(null);
+        setResizable(false);
         lblMarca = new JLabel("Marca: ");
         lblModelo = new JLabel("Modelo: ");
         lblPrecio = new JLabel("Precio: ");

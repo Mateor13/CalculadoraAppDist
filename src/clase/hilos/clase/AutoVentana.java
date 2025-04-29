@@ -44,6 +44,10 @@ public class AutoVentana extends JFrame{
         auto.setMarca(inputMarca.getText());
         auto.setPrecio(inputPrecio.getText());
         auto.setModelo(inputModelo.getText());
+        if (auto.getMarca().isEmpty() || auto.getModelo().isEmpty() || auto.getPrecio().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos.");
+            return;
+        }
         new Datos(auto);
         dispose();
         });
