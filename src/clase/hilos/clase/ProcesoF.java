@@ -2,21 +2,16 @@ package clase.hilos.clase;
 
 import javax.swing.*;
 import java.awt.*;
+import clase.hilos.clase.*;
 
-public class ProcesoF extends JFrame {
-    private JPanel Registro;
-    private JLabel txtMarca;
-    private JLabel txtModelo;
-    private JLabel txtPrecio;
-    private JTextField inputMarca;
-    private JTextField inputModelo;
-    private JTextField inputPrecio;
-    private JButton procesarButton;
+public class ProcesoF implements Runnable {
 
-    public ProcesoF(){
-        Registro = new JPanel();
-
-
+    public void Automoviles(){
+        AutoVentana au = new AutoVentana();
     }
 
+    @Override
+    public void run() {
+        Automoviles();
+    }
 }

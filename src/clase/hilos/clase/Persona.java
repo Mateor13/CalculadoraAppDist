@@ -1,6 +1,6 @@
 package clase.hilos.clase;
-import lombok.Setter;
 import lombok.Getter;
+import lombok.Setter;
 
 public class Persona {
     @Getter @Setter private String nombre;

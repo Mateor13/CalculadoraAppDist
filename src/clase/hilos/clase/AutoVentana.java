@@ -1,38 +1,52 @@
 package clase.hilos.clase;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class AutoVentana extends JFrame{
-
-    private JPanel Registro;
     private JTextField inputMarca;
     private JTextField inputModelo;
     private JTextField inputPrecio;
     private JButton registrarButton;
+    private JLabel lblMarca;
+    private JLabel lblModelo;
+    private JLabel lblPrecio;
 
     public AutoVentana(){
     setTitle("Registar");
-    setContentPane(Registro);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    setPreferredSize(new Dimension(600, 500));
-    setBackground(Color.red);
-    pack();
-    setVisible(true);
+    setSize(300, 250);
     setLocationRelativeTo(null);
     setResizable(false);
-        Auto auto = new Auto();
-        registrarButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                auto.setMarca(inputMarca.getText());
-                auto.setPrecio(inputPrecio.getText());
-                auto.setModelo(inputModelo.getText());
-                new Datos(auto);
-                dispose();
-            }
+    Auto auto = new Auto();
+
+    inputMarca = new JTextField();
+    inputModelo = new JTextField();
+    inputPrecio = new JTextField();
+    registrarButton = new JButton("Registrar");
+    lblMarca = new JLabel("Marca: ");
+    lblModelo = new JLabel("Modelo: ");
+    lblPrecio = new JLabel("Precio: ");
+    inputMarca.setBounds(70, 20, 150, 30);
+    inputModelo.setBounds(70, 60, 150, 30);
+    inputPrecio.setBounds(70, 100, 150, 30);
+    registrarButton.setBounds(70, 140, 150, 30);
+    lblMarca.setBounds(20, 20, 100, 30);
+    lblModelo.setBounds(20, 60, 100, 30);
+    lblPrecio.setBounds(20, 100, 100, 30);
+    add(inputMarca);
+    add(inputModelo);
+    add(inputPrecio);
+    add(registrarButton);
+    add(lblMarca);
+    add(lblModelo);
+    add(lblPrecio);
+    registrarButton.addActionListener(e -> {
+        auto.setMarca(inputMarca.getText());
+        auto.setPrecio(inputPrecio.getText());
+        auto.setModelo(inputModelo.getText());
+        new Datos(auto);
+        dispose();
         });
+    setVisible(true);
     }
 }

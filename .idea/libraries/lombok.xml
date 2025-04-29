@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="lombok1">
+  <library name="lombok">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/src/lombok.jar!/" />
     </CLASSES>
